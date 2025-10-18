@@ -247,10 +247,16 @@ def semantic_fallback(sentence, threshold=0.55):
     """
     When model confidence is too low, use semantic similarity to find the best-matching intent.
     """
-    if not intent_embeddings:
+    global embedding_model
+    # Lazy load the embedding model on first use
+    if embedding_model is None:
+        logger.info("Lazy loading embedding model for semantic fallback...")
+        prepare_intent_embeddings()
+
+    if not intent_embeddings or embedding_model is None:
         return [{"intent": "fallback", "probability": "1.0"}]
 
-    query_emb = embedding_model.encode(sentence, convert_to_tensor=True)
+    query_emb = embedding_model.encode(sentence, convert_to_tensor=True) # type: ignore
     best_match = None
     best_score = 0
 
@@ -503,7 +509,6 @@ def chatbot_response(msg, user_id="default"):
         # -----------------------------
         ints = predict_class(msg, model)
         top_confidence = float(ints[0]["probability"])
-
         # Hybrid semantic fallback trigger
         if top_confidence < 0.80 or ints[0]["intent"] == "fallback":
             logger.info(f"[{user_id}] Using semantic fallback (confidence={top_confidence:.2f})")
@@ -701,7 +706,6 @@ init_db()
 # Load the model at startup for production readiness
 logger.info("🚀 Server starting... Loading models and data.")
 load_model_and_data()
-prepare_intent_embeddings()
 
 # ------------------------------
 if __name__ == "__main__":
