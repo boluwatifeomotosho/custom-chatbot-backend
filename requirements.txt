@@ -8,7 +8,7 @@ pickle-mixin==1.0.2
 gunicorn==21.2.0
 python-dotenv==1.0.0
 requests==2.31.0
-sentence-transformers==2.2.2
+sentence-transformers==2.7.0
 torch==2.1.2
 torchvision==0.16.2
 typing-extensions<4.6.0,>=4.5.0
