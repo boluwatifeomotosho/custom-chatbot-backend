@@ -136,17 +136,17 @@ def load_model_and_data():
             return False
 
         # Load words
-        if os.path.exists("../Models/words.pkl"):
-            with open("../Models/words.pkl", "rb") as f:
+        if os.path.exists("Models/words.pkl"):
+            with open("Models/words.pkl", "rb") as f:
                 words = pickle.load(f)
                 logger.info(f"✅ Words loaded: {len(words) if words else 0} words")
         else:
-            logger.error("❌ ../Models/words.pkl not found! Please train the model first.")
+            logger.error("❌ Models/words.pkl not found! Please train the model first.")
             return False
 
         # Load classes
-        if os.path.exists("../Models/classes.pkl"):
-            with open("../Models/classes.pkl", "rb") as f:
+        if os.path.exists("Models/classes.pkl"):
+            with open("Models/classes.pkl", "rb") as f:
                 classes = pickle.load(f)
                 logger.info(f"✅ Classes loaded: {len(classes) if classes else 0} classes")
         else:
@@ -154,8 +154,8 @@ def load_model_and_data():
             return False
 
         # Load model
-        if os.path.exists("../Models/chatbot_model.h5"):
-            model = keras.models.load_model("../Models/chatbot_model.h5")
+        if os.path.exists("Models/chatbot_model.h5"):
+            model = keras.models.load_model("Models/chatbot_model.h5")
             # prepare_intent_embeddings() # Defer this to lazy loading
             logger.info("✅ Model loaded successfully")
         else:
@@ -414,15 +414,6 @@ def get_response(ints, intents_json, user_id, msg):
 # ------------------------------
 def chatbot_response(msg, user_id="default"):
     try:
-        # Reload model if it's not loaded
-        if model is None:
-            try:
-                load_model_and_data()
-                prepare_intent_embeddings() # Now load embeddings as well
-            except Exception as e:
-                logger.error(f"Failed to reload model: {e}")
-                return bolu_tone("yo, I’m still waking up 😴... try that again in a sec?")
-
         if user_id not in user_context:
             user_context[user_id] = {"history": [], "mood": None, "pending_learn": None}
 
@@ -655,6 +646,7 @@ def reload_model():
     try:
         logger.info("🔄 Force reloading model...")
         success = load_model_and_data()
+        prepare_intent_embeddings()
 
         if success:
             return jsonify({
@@ -709,8 +701,10 @@ if __name__ == "__main__":
     from waitress import serve
     # Initialize the database before starting the app
     init_db()
-    # Do NOT load the model at startup. It will be loaded on the first request.
-    logger.info("🚀 Server starting... Models will be loaded on the first request.")
+    # Load the model at startup for production readiness
+    logger.info("🚀 Server starting... Loading models and data.")
+    load_model_and_data()
+    prepare_intent_embeddings()
 
     port = app.config.get('PORT', 5000)
     # Use waitress for a more stable server that avoids segmentation faults
