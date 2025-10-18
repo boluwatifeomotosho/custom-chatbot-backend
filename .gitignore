@@ -1,0 +1,26 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+instance/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# Database files (if you're using a local SQLite file for testing)
+*.db
+*.sqlite3

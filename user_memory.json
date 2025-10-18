@@ -1,0 +1,237 @@
+{
+  "user_1760061901187_ks7gtxnwj": {
+    "history": [
+      {
+        "user": "hello",
+        "bot": "I'm not too sure what you mean. no cap By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      }
+    ],
+    "mood": null,
+    "last_intent": "fallback"
+  },
+  "user_1760062943160_enhlus2yx": {
+    "history": [
+      {
+        "user": "hi",
+        "bot": "hey there \ud83d\udc4b By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "My name is Bolu",
+        "bot": "Ayyy it's me \ud83d\ude08 welcome back bossman \ud83d\udd25"
+      },
+      {
+        "user": "what's up?",
+        "bot": "Lowkey tired but still standing \ud83d\ude02 \ud83d\ude02"
+      },
+      {
+        "user": "what's the time",
+        "bot": "It's 03:23 AM already. no cap"
+      },
+      {
+        "user": "how about the weather?",
+        "bot": "Bolu mode \ud83d\ude08: Weather info's off for now \ud83d\ude05"
+      },
+      {
+        "user": "lol",
+        "bot": "I'm not sure what you mean. Could you try explaining it differently?"
+      },
+      {
+        "user": "i'm so tired",
+        "bot": "Aiitt, so you're So not Bolu? Got it \ud83d\ude0e"
+      },
+      {
+        "user": "what's my name?",
+        "bot": "I'm your friendly AI assistant! Feel free to call me whatever feels comfortable to you."
+      },
+      {
+        "user": "heyy",
+        "bot": "I'm my bad bro, I didn't quite understand that. Could you please rephrase your question?"
+      },
+      {
+        "user": "hi",
+        "bot": "yo So! wassup \ud83d\ude0e"
+      }
+    ],
+    "mood": null,
+    "last_intent": "greeting",
+    "name": "So"
+  },
+  "user_1760063082548_iinui0p1y": {
+    "history": [
+      {
+        "user": "hey",
+        "bot": "Bolu mode \ud83d\ude08: hey there \ud83d\udc4b By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "call me desire",
+        "bot": "Mr Big Ballsssss..... how you dey? \ud83d\ude0e \ud83d\udc80"
+      },
+      {
+        "user": "i'm okay. you?",
+        "bot": "Aiitt, so you're aiit bet not Desire? Got it \ud83d\ude0e \ud83d\udc80"
+      },
+      {
+        "user": "what's my name?",
+        "bot": "I don't have a specific name, but you can call me your AI assistant or chatbot."
+      },
+      {
+        "user": "aiit",
+        "bot": "Go school, you nahhh gree. How you wan take understand?"
+      },
+      {
+        "user": "hey",
+        "bot": "Bolu mode \ud83d\ude08: yo aiit bet! wassup \ud83d\ude0e"
+      },
+      {
+        "user": "i'm bolu",
+        "bot": "Ayyy it's me \ud83d\ude08 welcome back bossman \ud83d\udd25 \ud83d\ude02"
+      },
+      {
+        "user": "hey",
+        "bot": "yo Bolu! wassup \ud83d\ude0e"
+      }
+    ],
+    "mood": null,
+    "last_intent": "greeting",
+    "name": "Bolu"
+  },
+  "user_1760140480072_5d1fi9mne": {
+    "history": [
+      {
+        "user": "hi",
+        "bot": "Bolu mode \ud83d\ude08: wassup! By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "call me bose",
+        "bot": "Bolu mode \ud83d\ude08: Mumsyyyy \ud83d\ude0d always looking elegant as usual!"
+      },
+      {
+        "user": "i'm tired",
+        "bot": "Aiitt, so you're Tired not Bose? Got it \ud83d\ude0e"
+      },
+      {
+        "user": "what's the weather like? i'm curious",
+        "bot": "Aiitt, so you're Curious not Tired? Got it \ud83d\ude0e"
+      },
+      {
+        "user": "what's the weather like? i'm curious",
+        "bot": "Weather info's off for now \ud83d\ude05 no cap"
+      },
+      {
+        "user": "i'm Boluwatife",
+        "bot": "Ayyy it's me \ud83d\ude08 welcome back bossman \ud83d\udd25 \ud83d\ude2e\u200d\ud83d\udca8"
+      }
+    ],
+    "mood": null,
+    "last_intent": "weather",
+    "name": "Boluwatife"
+  },
+  "user_1760143228566_dw4qf8fh5": {
+    "history": [
+      {
+        "user": "hi",
+        "bot": "hey there \ud83d\udc4b tbh By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "dunmola",
+        "bot": "how's it going? By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "dunmola",
+        "bot": "Bolu mode \ud83d\ude08: hey there \ud83d\udc4b \ud83d\ude2e\u200d\ud83d\udca8 By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "bolu",
+        "bot": "Bolu mode \ud83d\ude08: hey there \ud83d\udc4b"
+      },
+      {
+        "user": "yo",
+        "bot": "hey there \ud83d\udc4b \ud83d\ude02"
+      },
+      {
+        "user": "hi",
+        "bot": "Bolu mode \ud83d\ude08: wassup!"
+      },
+      {
+        "user": "what's the time?",
+        "bot": "It's 01:41 AM already. no cap"
+      }
+    ],
+    "mood": null,
+    "last_intent": "time"
+  },
+  "user_1760143320079_b03sr07iq": {
+    "history": [
+      {
+        "user": "hi",
+        "bot": "Bolu mode \ud83d\ude08: wassup! By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "akeem",
+        "bot": "hey there \ud83d\udc4b By the way, I don't think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "hi",
+        "bot": "Yo, I don\u2019t think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "call me dunmola",
+        "bot": "The lil sis..... nice to finally meet you. Bawoni? \ud83d\ude0f"
+      },
+      {
+        "user": "hello",
+        "bot": "yo Dunmola! wassup \ud83d\ude0e"
+      },
+      {
+        "user": "i'm good. you?",
+        "bot": "Aiitt, so you're Good not Dunmola? Got it \ud83d\ude0e"
+      },
+      {
+        "user": "i'm so tired",
+        "bot": "Aiitt, so you're So not Good? Got it \ud83d\ude0e \ud83d\ude02"
+      },
+      {
+        "user": "hi",
+        "bot": "Bolu mode \ud83d\ude08: yo So! wassup \ud83d\ude0e \ud83d\udc80"
+      },
+      {
+        "user": "i'm tired",
+        "bot": "Got you \ud83d\ude0c. Mind if I ask what\u2019s up?  (Hang in there bro \ud83d\udcaa)"
+      },
+      {
+        "user": "i'm dunmola, not so",
+        "bot": "Got you \ud83d\ude0c. Mind if I ask what\u2019s up? \ud83d\udc80  (Hang in there bro \ud83d\udcaa)"
+      },
+      {
+        "user": "i'm dunmola",
+        "bot": "Ah niceee, love that energy \ud83d\udd25 \ud83d\ude2e\u200d\ud83d\udca8  (Hang in there bro \ud83d\udcaa)"
+      },
+      {
+        "user": "my name is dunmola",
+        "bot": "The lil sis..... nice to finally meet you. Bawoni? \ud83d\ude0f"
+      }
+    ],
+    "mood": "sad",
+    "last_intent": "user_feeling",
+    "name": "Dunmola"
+  },
+  "user_1760209726468_35rwhbbqj": {
+    "history": [
+      {
+        "user": "hello",
+        "bot": "hey there \ud83d\udc4b \ud83d\ude02 By the way, I don\u2019t think I caught your name \ud83d\ude0f What should I call you?"
+      },
+      {
+        "user": "what's the time?",
+        "bot": "It's 08:14 PM already."
+      },
+      {
+        "user": "my name is kunmi",
+        "bot": "Aiitt Kunmi, nice to meet you \ud83d\ude0e tbh"
+      }
+    ],
+    "mood": null,
+    "last_intent": "time",
+    "name": "Kunmi"
+  }
+}
