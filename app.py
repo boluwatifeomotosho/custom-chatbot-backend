@@ -150,7 +150,7 @@ def load_model_and_data():
                 classes = pickle.load(f)
                 logger.info(f"✅ Classes loaded: {len(classes) if classes else 0} classes")
         else:
-            logger.error("❌ ../Models/classes.pkl not found! Please train the model first.")
+            logger.error("❌ Models/classes.pkl not found! Please train the model first.")
             return False
 
         # Load model
@@ -693,19 +693,19 @@ def retrain():
         return jsonify({"error": str(e)}), 500
 
 
-
 # ------------------------------
 # Startup
 # ------------------------------
+# Initialize the database before starting the app
+init_db()
+# Load the model at startup for production readiness
+logger.info("🚀 Server starting... Loading models and data.")
+load_model_and_data()
+prepare_intent_embeddings()
+
+# ------------------------------
 if __name__ == "__main__":
     from waitress import serve
-    # Initialize the database before starting the app
-    init_db()
-    # Load the model at startup for production readiness
-    logger.info("🚀 Server starting... Loading models and data.")
-    load_model_and_data()
-    prepare_intent_embeddings()
-
     port = app.config.get('PORT', 5000)
     # Use waitress for a more stable server that avoids segmentation faults
     serve(app, host=app.config.get('HOST', '0.0.0.0'), port=port)
