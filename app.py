@@ -556,7 +556,7 @@ def chatbot_response(msg, user_id="default"):
 # ------------------------------
 # API Routes
 # ------------------------------
-@app.route("/chat", methods=["POST"])
+@app.route("/api/chat", methods=["POST"])
 def chat():
     data = request.get_json()
     user_message = data.get("message", "").strip()
@@ -575,7 +575,7 @@ def chat():
     })
 
 
-@app.route("/health", methods=["GET"])
+@app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({
         "status": "healthy",
@@ -587,7 +587,7 @@ def health():
     })
 
 
-@app.route("/memory/<user_id>", methods=["GET"])
+@app.route("/api/memory/<user_id>", methods=["GET"])
 def memory_view(user_id):
     """
     🔍 View what the bot remembers about a specific user.
@@ -612,7 +612,7 @@ def memory_view(user_id):
     })
 
 
-@app.route("/train", methods=["POST"])
+@app.route("/api/train", methods=["POST"])
 def trigger_training():
     """Trigger model training"""
     try:
@@ -645,7 +645,7 @@ def trigger_training():
         return jsonify({"error": f"Training failed: {str(e)}"}), 500
 
 
-@app.route("/reload", methods=["POST"])
+@app.route("/api/reload", methods=["POST"])
 def reload_model():
     """Force reload the model and data"""
     try:
@@ -669,7 +669,7 @@ def reload_model():
         return jsonify({"error": f"Reload failed: {str(e)}"}), 500
 
 
-@app.route("/debug/<user_id>", methods=["GET"])
+@app.route("/api/debug/<user_id>", methods=["GET"])
 def debug_info(user_id):
     """Debug endpoint to check model status"""
     return jsonify({
@@ -684,7 +684,7 @@ def debug_info(user_id):
         "intents_count": len(intents.get("intents", [])) if intents else 0
     })
 
-@app.route("/retrain", methods=["POST"])
+@app.route("/api/retrain", methods=["POST"])
 def retrain():
     """Manually trigger retraining using learned intents."""
     try:
