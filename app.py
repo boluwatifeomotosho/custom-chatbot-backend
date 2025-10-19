@@ -187,7 +187,7 @@ intent_embeddings = []
 def prepare_intent_embeddings():
     global intent_embeddings, embedding_model
     if embedding_model is None:
-        embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+        embedding_model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
         logger.info("✅ Embedding model loaded successfully")
     intent_embeddings = []
 
@@ -558,6 +558,11 @@ def chatbot_response(msg, user_id="default"):
 # ------------------------------
 @app.route("/api/chat", methods=["POST"])
 def chat():
+    # Lazy load the model on the first request to save memory at startup
+    if model is None:
+        logger.info("First request, lazy loading model...")
+        load_model_and_data()
+
     data = request.get_json()
     user_message = data.get("message", "").strip()
     user_id = data.get("user_id", "default")
@@ -704,8 +709,8 @@ def retrain():
 # Initialize the database before starting the app
 init_db()
 # Load the model at startup for production readiness
-logger.info("🚀 Server starting... Loading models and data.")
-load_model_and_data()
+# logger.info("🚀 Server starting... Loading models and data.")
+# load_model_and_data() # We will now lazy-load this on the first request
 
 # ------------------------------
 if __name__ == "__main__":
